@@ -1,22 +1,24 @@
-import React, {useState} from 'react';
- import { useNavigate , Routes, Route } from "react-router-dom";
+import React, {useState} from 'react'
+import { useNavigate , Routes, Route } from "react-router-dom"
 import './styles.css'
-// import {BrowserRouter, Link, Route} from 'react-router-dom';
-import Welcome from './welcome.js';
-// <Route path="/welcome" component={Welcome} />
-
+import Header from './header'
+import Welcome from './welcome'
+<Route path="/welcome" component={Welcome} />
 
 function RegistrationForm() {
-const [register, setRegister ] = useState(false);
-const navigate = useNavigate();
+ // const [register, setRegister ] = useState(false);
+ const navigate = useNavigate()
 
-  const welcomePage = () => {
- setRegister(true);
-//    window.location.href = "/welcome"
-// props.onWelcomePage();
+ const welcomePage = (props) => {
+//  {register ? setRegister(false): setRegister(true) && navigate('/welcome')}
+//  setRegister(true)
+ navigate('/welcome')
+ // //    window.location.href = "/welcome"
  }
+
 return(
       <div className="form">
+        <Header/>
           <div className="form-body">
               <div className="username">
                   <label className="form__label" for="userName">First Name </label>
@@ -30,17 +32,17 @@ return(
                   <label className="form__label" for="password">Password </label>
                   <input className="form__input" type="password"  id="password" placeholder="Password"/>
               </div>
-          </div>
-          <div class="footer">
+              </div>
+              <div class="footer">
               <button className="btn" onClick={welcomePage} >Register</button>
               <Routes>
               <Route path="/welcome" element={<Welcome />} />
               </Routes>
-          </div>
-          <div>
-           {register ? navigate('/welcome') : null}
-          </div>
+              </div>
+        {/* <div>
+        {register ? navigate('/welcome') : null}
+        </div> */}
       </div>      
     )       
 }
-export default RegistrationForm;
+export default RegistrationForm

@@ -1,11 +1,9 @@
-import Header from './components/header';
-import RegistrationForm from './components/registrationForm'
+import RegistrationForm from './components/registrationForm';
 
 function App() {
   return (
     <div>
-      <Header/>
-      <RegistrationForm/>
+    <RegistrationForm />
     </div>
   );
 }
