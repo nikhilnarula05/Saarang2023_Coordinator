@@ -15,7 +15,7 @@ function RegistrationForm() {
  navigate('/welcome')
  // //    window.location.href = "/welcome"
  }
-
+// yes
 return(
       <div className="form">
         <Header/>
