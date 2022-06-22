@@ -9,7 +9,7 @@ function RegistrationForm() {
  // const [register, setRegister ] = useState(false);
  const navigate = useNavigate()
  const [title, setTitle] = useState('')
- const welcomePage = (props) => {
+ const welcomePage = () => {
 //  {register ? setRegister(false): setRegister(true) && navigate('/welcome')}
 //  setRegister(true)
  navigate('/welcome')
