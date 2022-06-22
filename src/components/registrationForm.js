@@ -9,9 +9,16 @@ import Welcome from './welcome.js';
 function RegistrationForm() {
 const [register, setRegister ] = useState(false);
 const navigate = useNavigate();
+const name="Nikhil"
+// const [data,setData]=useState(null);
+// const [data,setData]=useState(false);
+
+// function getData(val){
+//     setData(val.target.value)
+// }
 
   const welcomePage = () => {
- setRegister(true);
+  setRegister(true);
 //    window.location.href = "/welcome"
 // props.onWelcomePage();
  }
@@ -34,7 +41,7 @@ return(
           <div class="footer">
               <button className="btn" onClick={welcomePage} >Register</button>
               <Routes>
-              <Route path="/welcome" element={<Welcome />} />
+              <Route path="/welcome" element={<Welcome name={name}/>} />
               </Routes>
           </div>
           <div>

@@ -2,7 +2,7 @@ function Header(props) {
     return(
           <div>
           <h1>
-          Welcome
+          Welcome {props.name}
           </h1>
           <img
           height={200}
