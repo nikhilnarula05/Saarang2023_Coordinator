@@ -8,7 +8,7 @@ import Welcome from './welcome'
 function RegistrationForm() {
  // const [register, setRegister ] = useState(false);
  const navigate = useNavigate()
-
+ const [title, setTitle] = useState('')
  const welcomePage = (props) => {
 //  {register ? setRegister(false): setRegister(true) && navigate('/welcome')}
 //  setRegister(true)
@@ -22,7 +22,7 @@ return(
           <div className="form-body">
               <div className="username">
                   <label className="form__label" for="userName">First Name </label>
-                  <input className="form__input" type="text" id="userName" placeholder="Username"/>
+                  <input className="form__input" type="text" id="userName" placeholder="Username" onChange={event => setTitle(event.target.value)} />
               </div>
               <div className="email">
                   <label className="form__label" for="email">Email </label>
