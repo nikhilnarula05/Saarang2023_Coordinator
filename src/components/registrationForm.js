@@ -36,7 +36,7 @@ return(
               <div class="footer">
               <button className="btn" onClick={welcomePage} >Register</button>
               <Routes>
-              <Route path="/welcome" element={<Welcome />} />
+              <Route path="/welcome" element={<Welcome name={title}/>} />
               </Routes>
               </div>
         {/* <div>
