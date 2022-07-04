@@ -8,6 +8,8 @@ function RegistrationForm() {
  const navigate = useNavigate()
  const [email, setEmail] = useState('')
  const [title, setTitle] = useState('')
+
+ 
  const [register, setRegister] = useState(false);
 
  const welcomePage = () => {

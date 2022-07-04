@@ -1,43 +1,42 @@
-
 .header {
     padding: 25px 0;
     text-align: center;
     background: rgb(0, 0, 0);
-  }
-  .header img {
+}
+.header img {
     width: 160px;
     height: 160px;
-  }
+}
 
 .form{
     background-color: rgb(239, 215, 166);
     border-radius: 5px;
-    width: 600px;
+    width: 100vw;
     margin: 20px auto;
     padding: 20px;
-    height: 770px;
+    height: 100vh;
 }
-
 .form-body{
     text-align: center;
     padding: 20px 20px;
 }
-
 .form-body > *{
     padding: 6px;
 }
-
 .form__label{
     width: 40%;
 }
-
 .form_input{
     width: 60%;
 }
-
 .footer{
     text-align: center;
 }
+
 .welcomePage{
     text-align: center
+}
+.welcomePage img {
+    width: 20%;
+    height: 20%;
 }
