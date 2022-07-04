@@ -1,0 +1,10 @@
+.header {
+    padding: 25px 0;
+    text-align: center;
+    background: rgb(0, 0, 0);
+  }
+  .header img {
+    width: 160px;
+    height: 160px;
+  }
+  
