@@ -1,6 +1,6 @@
 function Header(props) {
     return(
-          <div>
+          <div className="welcomePage">
           <h1>
             Hello {props.name} !
           </h1>

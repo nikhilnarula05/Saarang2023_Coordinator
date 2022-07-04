@@ -1,23 +1,19 @@
 import React, {useState} from 'react'
-import { useNavigate , Routes, Route } from "react-router-dom"
+import {useNavigate, Routes, Route, Navigate} from "react-router-dom"
 import './styles.css'
 import Header from './header'
 import Welcome from './welcome'
-<Route path="/welcome" component={Welcome} />
 
 function RegistrationForm() {
- // const [register, setRegister ] = useState(false);
  const navigate = useNavigate()
  const [email, setEmail] = useState('')
  const [title, setTitle] = useState('')
- const [vmail, setVmail] = useState(false);
+ //const [register, setRegister] = useState(false);
+
  const welcomePage = () => {
-//  {register ? setRegister(false): setRegister(true) && navigate('/welcome')}
-//  setRegister(true)
-    {/\S+@\S+\.\S+/.test(email) ? navigate('/welcome') : alert("Please enter an valid email")}
- 
- // //    window.location.href = "/welcome"
- }
+    {/\S+@\S+\.\S+/.test(email) ? navigate("/welcome") : alert("Please enter an valid email")}
+  }
+
 return(
       <div className="form">
         <Header/>
@@ -34,16 +30,13 @@ return(
                   <label className="form__label" for="password">Password </label>
                   <input className="form__input" type="password"  id="password" placeholder="Password"/>
               </div>
-              </div>
-              <div class="footer">
-              <button className="btn" onClick={welcomePage} >Register</button>
-              <Routes>
-              <Route path="/welcome" element={<Welcome name={title} />} />
-              </Routes>
-              </div>
-        {/* <div>
-        {register ? navigate('/welcome') : null}
-        </div> */}
+          </div>
+          <div class="footer">
+                <button className="btn" onClick={welcomePage} >Register</button>
+          </div>
+          <Routes>
+          <Route exact path="/welcome" element={<Welcome name={title} />} />
+        </Routes>
       </div>      
     )       
 }
