@@ -8,11 +8,14 @@ import Welcome from './welcome'
 function RegistrationForm() {
  // const [register, setRegister ] = useState(false);
  const navigate = useNavigate()
+ const [email, setEmail] = useState('')
  const [title, setTitle] = useState('')
+ const [vmail, setVmail] = useState(false);
  const welcomePage = () => {
 //  {register ? setRegister(false): setRegister(true) && navigate('/welcome')}
 //  setRegister(true)
- navigate('/welcome')
+    {/\S+@\S+\.\S+/.test(email) ? navigate('/welcome') : alert("Please enter an valid email")}
+ 
  // //    window.location.href = "/welcome"
  }
 return(
@@ -25,7 +28,7 @@ return(
               </div>
               <div className="email">
                   <label className="form__label" for="email">Email </label>
-                  <input  type="email" id="email" className="form__input" placeholder="Email"/>
+                  <input  type="email" id="email" className="form__input" placeholder="Email" onChange={event => setEmail(event.target.value)} />
               </div>
               <div className="password">
                   <label className="form__label" for="password">Password </label>
@@ -35,7 +38,7 @@ return(
               <div class="footer">
               <button className="btn" onClick={welcomePage} >Register</button>
               <Routes>
-              <Route path="/welcome" element={<Welcome name={title}/>} />
+              <Route path="/welcome" element={<Welcome name={title} />} />
               </Routes>
               </div>
         {/* <div>
