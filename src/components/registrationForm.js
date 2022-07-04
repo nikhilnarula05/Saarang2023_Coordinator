@@ -8,10 +8,10 @@ function RegistrationForm() {
  const navigate = useNavigate()
  const [email, setEmail] = useState('')
  const [title, setTitle] = useState('')
- //const [register, setRegister] = useState(false);
+ const [register, setRegister] = useState(false);
 
  const welcomePage = () => {
-    {/\S+@\S+\.\S+/.test(email) ? navigate("/welcome") : alert("Please enter an valid email")}
+    {/\S+@\S+\.\S+/.test(email) ? navigate("/welcome") && setRegister(true) : alert("Please enter an valid email")}
   }
 
 return(
@@ -35,8 +35,8 @@ return(
                 <button className="btn" onClick={welcomePage} >Register</button>
           </div>
           <Routes>
-          <Route exact path="/welcome" element={<Welcome name={title} />} />
-        </Routes>
+            <Route exact path="/welcome" element={<Welcome name={title} />} />
+          </Routes>
       </div>      
     )       
 }
