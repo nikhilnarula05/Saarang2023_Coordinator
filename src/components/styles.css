@@ -14,7 +14,7 @@
     width: 600px;
     margin: 20px auto;
     padding: 20px;
-    height: 770px;
+    height: 830px;
 }
 .form-body{
     text-align: center;
@@ -34,9 +34,11 @@
 }
 
 .welcomePage{
-    text-align: center
+    text-align: center;
+    padding: 20px 20px;
 }
 .welcomePage img {
     width: 40%;
     height: 40%;
+    padding: 20px 20px;
 }
