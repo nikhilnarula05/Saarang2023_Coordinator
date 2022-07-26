@@ -9,7 +9,6 @@ function Header() {
     />
     <h3 style={{ color: 'white'}} className="headerContent">Saarang 2023</h3>
     </div>
-
     )
 }
 export default Header
