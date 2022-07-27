@@ -16,7 +16,7 @@ function Header(props) {
           ></img>
           <Iframe className="song" 
           src="https://open.spotify.com/embed/track/0VjIjW4GlUZAMYd2vXMi3b?utm_source=generator" 
-          width="50%" 
+          width="100%" 
           height="80" 
           frameBorder="0" 
           allowfullscreen="0" 
