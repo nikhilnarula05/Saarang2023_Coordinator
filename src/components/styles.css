@@ -5,16 +5,15 @@
     border-radius: 4px;
 }
 .header img {
-    width: 11%;
-    height: 11%;
+    width: 20%;
+    height: 20%;
 }
 .form{
-    background-color: rgb(239, 215, 166);
-    border-radius: 10px;
-    width: 100%;
-    margin: 20px auto;
-    padding: 15px;
-    height: 100%;
+    background-color: rgb(0, 0, 0);
+    width: 100vw;
+    height: 100vh;
+    color: azure;
+    text-size-adjust: 500px;
 }
 .form-body{
     text-align: center;
@@ -32,12 +31,33 @@
 .footer{
     text-align: center;
 }
+.btn{
+    margin : 4px
+}
 .welcomePage{
     text-align: center;
     padding: 20px 20px;
+    background: rgb(0, 0, 0);
 }
 .welcomePage img {
     width: 30%;
     height: 30%;
     padding: 20px 20px;
 }
+::placeholder {
+    color: rgb(0, 0, 0);
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: rgb(0, 0, 0);
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+   color: rgb(0, 0, 0);
+  }
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: rgb(0, 0, 0);
+  }
+
+
