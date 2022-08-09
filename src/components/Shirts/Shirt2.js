@@ -4,17 +4,17 @@ import Size from './shirtsize'
 
 export default class Shirt1 extends React.Component {  
   state = {
-    count: 0
+    count2: 0
   };
   increment = () => {
     this.setState({
-      count: this.state.count + 1
+      count2: this.state.count2 + 1
     });
   };
 
   decrement = () => {
     this.setState({
-      count: this.state.count - 1
+      count2: this.state.count2 - 1
     });
   };
 
@@ -34,7 +34,7 @@ export default class Shirt1 extends React.Component {
             </Select></div>
           <div><button onClick={this.increment}>Add to Cart</button></div>
           <div><button onClick={this.decrement}>Remove from Cart</button></div>
-          <div>Count : {this.state.count}</div>
+          <div>Count : {this.state.count2}</div>
     </div>
     );
   }

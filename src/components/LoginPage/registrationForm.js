@@ -8,7 +8,9 @@ import Welcome from '../welcome'
 function RegistrationForm() {
  const navigate = useNavigate()
  const [email, setEmail] = useState('')
- const welcomePage = () => {!(/\S+@\S+\.\S+/.test(email)) ? navigate("/welcome") : alert("Please enter an valid email")}
+ const welcomePage = () => {
+  !(/\S+@\S+\.\S+/.test(email)) ? navigate("/welcome") : alert("Please enter an valid email")
+}
     return(
       <div className="form">
         <Header/>
@@ -16,7 +18,7 @@ function RegistrationForm() {
           <div className="form-body"  >
               <div className="email">
                  <h4> <label className="form__label" for="email"></label> </h4>
-                <h5>  <input id="email" className="form__input" placeholder="            Login to Buy" onChange={event => setEmail(event.target.value)} /></h5>
+                <h5>  <input id="email" className="form__input" placeholder="Click below to Login" onChange={event => setEmail(event.target.value)} /></h5>
               </div>
           </div>
           <div className="footer">
